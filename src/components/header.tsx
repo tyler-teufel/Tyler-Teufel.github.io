@@ -1,44 +1,30 @@
+// Header.tsx
 
 import { ReactNode } from "react";
-import styled from 'styled-components'
-
-const StyledHeader = styled.header`
-    display: flex;
-    background-color: #282c34;
-    z-index: 100;
-    width: 100%;
-    color: white;
-    padding: 0 20px;
-    left: 0;
-    top: 0;
-    position: fixed;
-    height: 60px;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    h1 {
-        margin: auto;
-        
-        
-    }
+import { Link } from 'react-router-dom';
+import { StyledHeader } from '../Style';
 
 
-
-
-
-
-`
-
-interface HeaderProps {
+interface Props {
     children?: ReactNode;
     className?: string;
-    
 }
 
+const Header: React.FC<Props> = ( {  } : Props) => {
 
-export const Header = ( { children, className } : HeaderProps) => {
-    
-    return <StyledHeader className={className}>{children}</StyledHeader>;
+  return (
+    <StyledHeader>
+      <nav>
+        <Link to="./Pages/portfolio"><h1 id="Portfolio">Portfolio</h1></Link>
+        <Link to="./Pages/About"><h1 id = "About_Me">About Me</h1></Link>
+        <Link to="./Pages/Contact"><h1 id = "Contact">Contact</h1></Link>
+        <Link to="./Pages/Resume"><h1 id = "Resume">Resume</h1></Link>
+        <Link to="./Pages/Skills"><h1 id = "Skills">Skills</h1></Link>
+        <Link to="./Pages/Education"><h1 id="Education">Education</h1></Link>
+      </nav>
+    </StyledHeader>
+  );
 
-}
+};
+
+export default Header;

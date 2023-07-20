@@ -1,32 +1,34 @@
-import './App.css'
-import {Header} from './components/header.tsx'
-import jquery from 'jquery'
+// App.tsx
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/header';
+import Portfolio from './Pages/Portfolio';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Resume from './Pages/Resume';
+import Skills from './Pages/Skills';
+import Education from './Pages/Education';
 
 
-function App() {
-  
-  
 
+const App = () => {
 
   return (
-    <>
-      <Header>
-       <h1>Portfolio</h1> 
-        </Header>
-      
-      <div>
-        
-       </div> 
-       
-       
-       <input className='name' type="text" placeholder="Enter your name" />
-      <button>Submit</button>
+    <Router>
+      <Header />
 
-      <p className="read-the-docs">
-        Enter your name to be added to the list!
-      </p>
-    </>
-  )
+      <Routes>
+        <Route path="/Pages/Portfolio" element={<Portfolio />} />
+        <Route path="/Pages/About" element={<About />} />
+        <Route path="/Pages/Contact" element={<Contact />} />
+        <Route path="/Pages/Resume" element={<Resume />} />
+        <Route path="/Pages/Skills" element={<Skills />} />
+        <Route path="/Pages/Education" element={<Education />} />
+      </Routes>
+    </Router>
+  );
+
+
 }
 
 export default App
