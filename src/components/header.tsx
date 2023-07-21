@@ -15,7 +15,7 @@ const Header: React.FC<Props> = ( {  } : Props) => {
   return (
     <StyledHeader>
       <nav>
-        <Link to="./Pages/portfolio"><h1 id="Portfolio">Portfolio</h1></Link>
+        <Link to="./Pages/Portfolio"><h1 id="Portfolio">Portfolio</h1></Link>
         <Link to="./Pages/About"><h1 id = "About_Me">About Me</h1></Link>
         <Link to="./Pages/Contact"><h1 id = "Contact">Contact</h1></Link>
         <Link to="./Pages/Resume"><h1 id = "Resume">Resume</h1></Link>
