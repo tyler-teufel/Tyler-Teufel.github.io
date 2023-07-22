@@ -74,6 +74,17 @@ input:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+#Portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5em;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

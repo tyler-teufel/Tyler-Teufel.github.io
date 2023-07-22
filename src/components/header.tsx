@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import { Link } from 'react-router-dom';
-import { StyledHeader } from '../Style';
+import { Menu, StyledHeader } from '../Style';
 
 
 interface Props {
@@ -13,8 +13,10 @@ interface Props {
 const Header: React.FC<Props> = ( {  } : Props) => {
 
   return (
+    
     <StyledHeader>
-      <nav>
+      <style>{Menu}</style>
+      <nav className=".NavBar">
         <Link to="./Pages/Portfolio"><h1 id="Portfolio">Portfolio</h1></Link>
         <Link to="./Pages/About"><h1 id = "About_Me">About Me</h1></Link>
         <Link to="./Pages/Contact"><h1 id = "Contact">Contact</h1></Link>
