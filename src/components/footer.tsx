@@ -1,6 +1,6 @@
 
 import { ReactNode } from "react";
-import { StyledFooter} from '../Style';
+import { StyledFooter} from '../styles/Style';
 
 
 

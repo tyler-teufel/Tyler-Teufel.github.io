@@ -1,19 +1,29 @@
 // App.tsx
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/header';
-import Portfolio from './Pages/Portfolio';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
-import Resume from './Pages/Resume';
-import Skills from './Pages/Skills';
-import Education from './Pages/Education';
-
-
-
+import { routes } from './routes';
+import { Header } from './components/header';
+import { GlobalStyles } from './styles';
 const App = () => {
 
   return (
+    <>  
+
+    <GlobalStyles />
+    <Router>
+    <Header />
+    <Routes>
+      {routes.map(route => (
+        <Route 
+          key={route.path}
+          path={route.path}
+          element={<route.component />} 
+        />
+      ))}
+    </Routes>
+    </Router>
+    </>
+    /*
     <Router>
       <Header />
 
@@ -26,6 +36,7 @@ const App = () => {
         <Route path="/Pages/Education" element={<Education />} />
       </Routes>
     </Router>
+    */
   );
 
 
