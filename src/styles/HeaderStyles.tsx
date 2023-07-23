@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
 
-.header {
+
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
     background-color: #242424;
@@ -23,8 +23,21 @@ export const HeaderStyle = styled.header`
     
     box-sizing: border-box;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  }
+  
 
   
+  .NavBar {
+    margin: 0 0 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+
+  }
 
 `;

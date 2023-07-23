@@ -1,8 +1,6 @@
 // Header.tsx
 
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { Menu } from '../styles/Style';
 import { HeaderStyle } from '../styles';
 
 interface Props {
@@ -12,8 +10,10 @@ interface Props {
 export const Header: React.FC<Props> = ({}: Props) => {
   return (
    <>
-    <HeaderStyle />
-      <nav>
+    <HeaderStyle >
+      <nav className="NavBar">
+        
+      
         <Link to="/Portfolio">Portfolio</Link>
         <Link to="/about">About</Link>  
         <Link to="/contact">Contact</Link>
@@ -22,6 +22,7 @@ export const Header: React.FC<Props> = ({}: Props) => {
         <Link to="/education">Education</Link>
 
       </nav>
+    </HeaderStyle>
    </>
   )
 }
